@@ -13,17 +13,6 @@ terraform {
 
 }
 
-terraform {
-  //use s3 as the backend to store the state file
-  backend "s3" {
-    bucket = "my-terraform-backen-abc-tech123"
-    key    = "Prod/terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-
 provider "aws" {
   region = var.region
 }provider "aws" {
-  region     = "us-east-1"
-}
