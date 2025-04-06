@@ -30,9 +30,9 @@ jobs:
       run: terraform init
       working-directory: ./Beanstalk-rds
 
-     -  name: Plan Terraform deployment
-        run: terraform plan
-        working-directory: ./Beanstalk-rds
+    -  name: Plan Terraform deployment
+       run: terraform plan
+       working-directory: ./Beanstalk-rds
 
      - name : destroy Terraform deployment
        run : terraform destroy -auto-approve
