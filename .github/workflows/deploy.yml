@@ -26,13 +26,13 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Correct input for Secret Access Key
         aws-region: ${{ secrets.AWS_REGION }}  # Correct input for AWS Region
 
-    - name: Initialize Terraform
-      run: terraform init
-      working-directory: ./Beanstalk-rds
+    #- name: Initialize Terraform
+    #  run: terraform init
+    #  working-directory: ./Beanstalk-rds
 
-    - name: Plan Terraform deployment
-      run: terraform plan
-      working-directory: ./Beanstalk-rds
+    # - name: Plan Terraform deployment
+    #  run: terraform plan
+    #  working-directory: ./Beanstalk-rds
 
     - name : destroy Terraform deployment
       run : terraform destroy -auto-approve
