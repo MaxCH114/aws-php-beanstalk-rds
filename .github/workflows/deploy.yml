@@ -34,8 +34,8 @@ jobs:
       run: terraform plan
       working-directory: ./Beanstalk-rds
 
-    - name : apply Terraform deployment
-      run : terraform apply -auto-approve
+    - name : destroy Terraform deployment
+      run : terraform destroy -auto-approve
       working-directory: ./Beanstalk-rds
 
   
